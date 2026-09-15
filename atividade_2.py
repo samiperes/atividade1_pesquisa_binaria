@@ -24,7 +24,7 @@ while inicio <= fim:
 
     if lista[meio][0] == 256:
         print("Nome:", lista[meio][1])
-        print("Tentativas:", tentativas)
+        print("Tentativas na pesquisa binária:", tentativas)
         break
 
     if lista[meio][0] < 256:
@@ -32,5 +32,11 @@ while inicio <= fim:
     else:
         fim = meio - 1
 
+tentativas = 0
 
-print("Pesquisa sequencial: 39 tentativas")
+for numero, nome in lista:
+    tentativas += 1
+
+    if numero == 256:
+        print("Tentativas na pesquisa sequencial:", tentativas)
+        break
